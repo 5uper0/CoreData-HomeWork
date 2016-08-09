@@ -16,6 +16,22 @@
 		AC18C7901D2D09A100FDC32B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC18C78E1D2D09A100FDC32B /* LaunchScreen.storyboard */; };
 		AC18C79B1D2D09A100FDC32B /* HomeWork41_44_CoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18C79A1D2D09A100FDC32B /* HomeWork41_44_CoreDataTests.m */; };
 		AC18C7A61D2D09A100FDC32B /* HomeWork41_44_CoreDataUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18C7A51D2D09A100FDC32B /* HomeWork41_44_CoreDataUITests.m */; };
+		AC18C7BC1D2D0C8700FDC32B /* OVCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18C7BB1D2D0C8700FDC32B /* OVCoreDataTableViewController.m */; };
+		AC18C7BF1D2D0DC600FDC32B /* OVDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18C7BE1D2D0DC600FDC32B /* OVDataManager.m */; };
+		AC18C7C51D2D174E00FDC32B /* OVUsersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18C7C41D2D174E00FDC32B /* OVUsersTableViewController.m */; };
+		AC18C8171D2D4B9200FDC32B /* OVUserEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18C8161D2D4B9200FDC32B /* OVUserEditingViewController.m */; };
+		AC18C8201D2F913100FDC32B /* OVCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC18C81F1D2F912E00FDC32B /* OVCoursesViewController.m */; };
+		AC1D767A1D37B79E00106558 /* name_32px.png in Resources */ = {isa = PBXBuildFile; fileRef = AC1D76791D37B79E00106558 /* name_32px.png */; };
+		AC61EAE01D379D9F00DDE915 /* OVTeachersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC61EADF1D379D9F00DDE915 /* OVTeachersViewController.m */; };
+		AC67731C1D304C5D00E63DF2 /* OVCoursesEditingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC67731B1D304C5D00E63DF2 /* OVCoursesEditingTableViewController.m */; };
+		AC6773231D343EF100E63DF2 /* gender_neutral_user_32px.png in Resources */ = {isa = PBXBuildFile; fileRef = AC6773221D343EF100E63DF2 /* gender_neutral_user_32px.png */; };
+		AC6773251D343EFF00E63DF2 /* library_32px.png in Resources */ = {isa = PBXBuildFile; fileRef = AC6773241D343EFF00E63DF2 /* library_32px.png */; };
+		AC67732E1D34EDED00E63DF2 /* OVCourse+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6773271D34EDED00E63DF2 /* OVCourse+CoreDataProperties.m */; };
+		AC67732F1D34EDED00E63DF2 /* OVCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6773291D34EDED00E63DF2 /* OVCourse.m */; };
+		AC6773301D34EDED00E63DF2 /* OVUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AC67732B1D34EDED00E63DF2 /* OVUser+CoreDataProperties.m */; };
+		AC6773311D34EDED00E63DF2 /* OVUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AC67732D1D34EDED00E63DF2 /* OVUser.m */; };
+		AC95920D1D37ABCC00E3A97F /* museum_32px.png in Resources */ = {isa = PBXBuildFile; fileRef = AC95920C1D37ABCC00E3A97F /* museum_32px.png */; };
+		AC95920F1D37ABFD00E3A97F /* to_do_100px.png in Resources */ = {isa = PBXBuildFile; fileRef = AC95920E1D37ABFD00E3A97F /* to_do_100px.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +69,33 @@
 		AC18C7A11D2D09A100FDC32B /* HomeWork41-44 CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HomeWork41-44 CoreDataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC18C7A51D2D09A100FDC32B /* HomeWork41_44_CoreDataUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeWork41_44_CoreDataUITests.m; sourceTree = "<group>"; };
 		AC18C7A71D2D09A100FDC32B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC18C7BA1D2D0C8700FDC32B /* OVCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVCoreDataTableViewController.h; sourceTree = "<group>"; };
+		AC18C7BB1D2D0C8700FDC32B /* OVCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVCoreDataTableViewController.m; sourceTree = "<group>"; };
+		AC18C7BD1D2D0DC600FDC32B /* OVDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVDataManager.h; sourceTree = "<group>"; };
+		AC18C7BE1D2D0DC600FDC32B /* OVDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVDataManager.m; sourceTree = "<group>"; };
+		AC18C7C31D2D174E00FDC32B /* OVUsersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVUsersTableViewController.h; sourceTree = "<group>"; };
+		AC18C7C41D2D174E00FDC32B /* OVUsersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVUsersTableViewController.m; sourceTree = "<group>"; };
+		AC18C8151D2D4B9200FDC32B /* OVUserEditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVUserEditingViewController.h; sourceTree = "<group>"; };
+		AC18C8161D2D4B9200FDC32B /* OVUserEditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVUserEditingViewController.m; sourceTree = "<group>"; };
+		AC18C81E1D2F912E00FDC32B /* OVCoursesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVCoursesViewController.h; sourceTree = "<group>"; };
+		AC18C81F1D2F912E00FDC32B /* OVCoursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVCoursesViewController.m; sourceTree = "<group>"; };
+		AC1D76791D37B79E00106558 /* name_32px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = name_32px.png; sourceTree = "<group>"; };
+		AC61EADE1D379D9F00DDE915 /* OVTeachersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVTeachersViewController.h; sourceTree = "<group>"; };
+		AC61EADF1D379D9F00DDE915 /* OVTeachersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVTeachersViewController.m; sourceTree = "<group>"; };
+		AC67731A1D304C5D00E63DF2 /* OVCoursesEditingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVCoursesEditingTableViewController.h; sourceTree = "<group>"; };
+		AC67731B1D304C5D00E63DF2 /* OVCoursesEditingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVCoursesEditingTableViewController.m; sourceTree = "<group>"; };
+		AC6773221D343EF100E63DF2 /* gender_neutral_user_32px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gender_neutral_user_32px.png; sourceTree = "<group>"; };
+		AC6773241D343EFF00E63DF2 /* library_32px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library_32px.png; sourceTree = "<group>"; };
+		AC6773261D34EDED00E63DF2 /* OVCourse+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OVCourse+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AC6773271D34EDED00E63DF2 /* OVCourse+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OVCourse+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AC6773281D34EDED00E63DF2 /* OVCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVCourse.h; sourceTree = "<group>"; };
+		AC6773291D34EDED00E63DF2 /* OVCourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVCourse.m; sourceTree = "<group>"; };
+		AC67732A1D34EDED00E63DF2 /* OVUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OVUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AC67732B1D34EDED00E63DF2 /* OVUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OVUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AC67732C1D34EDED00E63DF2 /* OVUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVUser.h; sourceTree = "<group>"; };
+		AC67732D1D34EDED00E63DF2 /* OVUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVUser.m; sourceTree = "<group>"; };
+		AC95920C1D37ABCC00E3A97F /* museum_32px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = museum_32px.png; sourceTree = "<group>"; };
+		AC95920E1D37ABFD00E3A97F /* to_do_100px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = to_do_100px.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,14 +146,18 @@
 		AC18C77C1D2D09A000FDC32B /* HomeWork41-44 CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				AC18C7801D2D09A000FDC32B /* AppDelegate.h */,
-				AC18C7811D2D09A000FDC32B /* AppDelegate.m */,
+				AC18C7B31D2D0B6600FDC32B /* CoreDataModel */,
+				AC61EADC1D366AAC00DDE915 /* ViewControllers */,
+				AC61EADD1D366AC800DDE915 /* CoreData */,
+				AC67731D1D343BCB00E63DF2 /* images */,
 				AC18C7831D2D09A000FDC32B /* ViewController.h */,
 				AC18C7841D2D09A100FDC32B /* ViewController.m */,
-				AC18C7861D2D09A100FDC32B /* Main.storyboard */,
 				AC18C78C1D2D09A100FDC32B /* Assets.xcassets */,
 				AC18C78E1D2D09A100FDC32B /* LaunchScreen.storyboard */,
 				AC18C7911D2D09A100FDC32B /* Info.plist */,
+				AC18C7801D2D09A000FDC32B /* AppDelegate.h */,
+				AC18C7811D2D09A000FDC32B /* AppDelegate.m */,
+				AC18C7861D2D09A100FDC32B /* Main.storyboard */,
 				AC18C7891D2D09A100FDC32B /* HomeWork41_44_CoreData.xcdatamodeld */,
 				AC18C77D1D2D09A000FDC32B /* Supporting Files */,
 			);
@@ -141,6 +188,61 @@
 				AC18C7A71D2D09A100FDC32B /* Info.plist */,
 			);
 			path = "HomeWork41-44 CoreDataUITests";
+			sourceTree = "<group>";
+		};
+		AC18C7B31D2D0B6600FDC32B /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC6773261D34EDED00E63DF2 /* OVCourse+CoreDataProperties.h */,
+				AC6773271D34EDED00E63DF2 /* OVCourse+CoreDataProperties.m */,
+				AC6773281D34EDED00E63DF2 /* OVCourse.h */,
+				AC6773291D34EDED00E63DF2 /* OVCourse.m */,
+				AC67732A1D34EDED00E63DF2 /* OVUser+CoreDataProperties.h */,
+				AC67732B1D34EDED00E63DF2 /* OVUser+CoreDataProperties.m */,
+				AC67732C1D34EDED00E63DF2 /* OVUser.h */,
+				AC67732D1D34EDED00E63DF2 /* OVUser.m */,
+			);
+			name = CoreDataModel;
+			sourceTree = "<group>";
+		};
+		AC61EADC1D366AAC00DDE915 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC18C8151D2D4B9200FDC32B /* OVUserEditingViewController.h */,
+				AC18C8161D2D4B9200FDC32B /* OVUserEditingViewController.m */,
+				AC67731A1D304C5D00E63DF2 /* OVCoursesEditingTableViewController.h */,
+				AC67731B1D304C5D00E63DF2 /* OVCoursesEditingTableViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AC61EADD1D366AC800DDE915 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AC18C7BD1D2D0DC600FDC32B /* OVDataManager.h */,
+				AC18C7BE1D2D0DC600FDC32B /* OVDataManager.m */,
+				AC18C7BA1D2D0C8700FDC32B /* OVCoreDataTableViewController.h */,
+				AC18C7BB1D2D0C8700FDC32B /* OVCoreDataTableViewController.m */,
+				AC18C7C31D2D174E00FDC32B /* OVUsersTableViewController.h */,
+				AC18C7C41D2D174E00FDC32B /* OVUsersTableViewController.m */,
+				AC18C81E1D2F912E00FDC32B /* OVCoursesViewController.h */,
+				AC18C81F1D2F912E00FDC32B /* OVCoursesViewController.m */,
+				AC61EADE1D379D9F00DDE915 /* OVTeachersViewController.h */,
+				AC61EADF1D379D9F00DDE915 /* OVTeachersViewController.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		AC67731D1D343BCB00E63DF2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AC1D76791D37B79E00106558 /* name_32px.png */,
+				AC6773221D343EF100E63DF2 /* gender_neutral_user_32px.png */,
+				AC95920C1D37ABCC00E3A97F /* museum_32px.png */,
+				AC6773241D343EFF00E63DF2 /* library_32px.png */,
+				AC95920E1D37ABFD00E3A97F /* to_do_100px.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,8 +351,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6773231D343EF100E63DF2 /* gender_neutral_user_32px.png in Resources */,
+				AC95920F1D37ABFD00E3A97F /* to_do_100px.png in Resources */,
 				AC18C7901D2D09A100FDC32B /* LaunchScreen.storyboard in Resources */,
 				AC18C78D1D2D09A100FDC32B /* Assets.xcassets in Resources */,
+				AC6773251D343EFF00E63DF2 /* library_32px.png in Resources */,
+				AC1D767A1D37B79E00106558 /* name_32px.png in Resources */,
+				AC95920D1D37ABCC00E3A97F /* museum_32px.png in Resources */,
 				AC18C7881D2D09A100FDC32B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,7 +385,18 @@
 			files = (
 				AC18C7851D2D09A100FDC32B /* ViewController.m in Sources */,
 				AC18C78B1D2D09A100FDC32B /* HomeWork41_44_CoreData.xcdatamodeld in Sources */,
+				AC67732E1D34EDED00E63DF2 /* OVCourse+CoreDataProperties.m in Sources */,
+				AC67732F1D34EDED00E63DF2 /* OVCourse.m in Sources */,
+				AC67731C1D304C5D00E63DF2 /* OVCoursesEditingTableViewController.m in Sources */,
 				AC18C7821D2D09A000FDC32B /* AppDelegate.m in Sources */,
+				AC18C7BF1D2D0DC600FDC32B /* OVDataManager.m in Sources */,
+				AC61EAE01D379D9F00DDE915 /* OVTeachersViewController.m in Sources */,
+				AC6773301D34EDED00E63DF2 /* OVUser+CoreDataProperties.m in Sources */,
+				AC18C7BC1D2D0C8700FDC32B /* OVCoreDataTableViewController.m in Sources */,
+				AC6773311D34EDED00E63DF2 /* OVUser.m in Sources */,
+				AC18C8201D2F913100FDC32B /* OVCoursesViewController.m in Sources */,
+				AC18C7C51D2D174E00FDC32B /* OVUsersTableViewController.m in Sources */,
+				AC18C8171D2D4B9200FDC32B /* OVUserEditingViewController.m in Sources */,
 				AC18C77F1D2D09A000FDC32B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +623,7 @@
 				AC18C7AC1D2D09A100FDC32B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC18C7AD1D2D09A100FDC32B /* Build configuration list for PBXNativeTarget "HomeWork41-44 CoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +632,7 @@
 				AC18C7AF1D2D09A100FDC32B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC18C7B01D2D09A100FDC32B /* Build configuration list for PBXNativeTarget "HomeWork41-44 CoreDataUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +641,7 @@
 				AC18C7B21D2D09A100FDC32B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

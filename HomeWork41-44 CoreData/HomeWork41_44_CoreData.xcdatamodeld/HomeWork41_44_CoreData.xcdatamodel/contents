@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="OVCourse" representedClassName="OVCourse" syncable="YES">
+        <attribute name="branch" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OVUser" inverseName="learningCourses" inverseEntity="OVUser" syncable="YES"/>
+        <relationship name="teacher" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OVUser" inverseName="teachingCourses" inverseEntity="OVUser" syncable="YES"/>
+    </entity>
+    <entity name="OVUser" representedClassName="OVUser" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="learningCourses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OVCourse" inverseName="students" inverseEntity="OVCourse" syncable="YES"/>
+        <relationship name="teachingCourses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OVCourse" inverseName="teacher" inverseEntity="OVCourse" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="OVCourse" positionX="-108" positionY="-342" width="128" height="118"/>
+        <element name="OVUser" positionX="567" positionY="-414" width="128" height="118"/>
+    </elements>
 </model>
