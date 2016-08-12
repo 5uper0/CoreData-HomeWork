@@ -6,6 +6,8 @@
 //  Copyright © 2016 Selfie. All rights reserved.
 //
 
+// Controller for editing existing user or adding information about new one
+
 #import "OVCoreDataTableViewController.h"
 
 @class OVUser;

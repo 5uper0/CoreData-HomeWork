@@ -12,7 +12,6 @@
 #import "OVUser.h"
 #import "OVUserEditingViewController.h"
 
-
 @interface OVUserEditingViewController () <UITableViewDataSource, UITabBarControllerDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) UITextField *firstNameField;
@@ -25,12 +24,20 @@
 @end
 
 typedef enum : NSUInteger {
-    
-    OVTextFieldFirstName    = 0,
-    OVTextFieldLastName     = 1,
-    OVTextFieldEmail        = 2
-    
-} OVTextField;
+    OVTextFieldFirstName,
+    OVTextFieldLastName,
+    OVTextFieldEmail
+}   OVTextField;
+
+typedef enum : NSUInteger {
+    OVSectionNumberStudentInfo,
+    OVSectionNumberTeachingCourses,
+    OVSectionNumberLearningCourses
+}   OVSectionNumber;
+
+static NSString *sectionNameStudentInfo     = @"Student Info";
+static NSString *sectionNameTeachingCourses = @"Teaching Courses";
+static NSString *sectionNameLearningCourses = @"Learning Courses";
 
 @implementation OVUserEditingViewController
 
@@ -38,10 +45,10 @@ typedef enum : NSUInteger {
     [super viewDidLoad];
     
     if (self.user) {
-        self.navigationItem.title = [NSString stringWithFormat:@"%@ %@", self.user.firstName, self.user.lastName];
+        self.navigationItem.title =
+        [NSString stringWithFormat:@"%@ %@", self.user.firstName, self.user.lastName];
 
     } else {
-        
         self.navigationItem.title = @"Add New Student";
     }
     
@@ -61,7 +68,6 @@ typedef enum : NSUInteger {
 
     self.emailField = [self createAndSetTextField];
     self.emailField.text = self.user.email;
-    self.emailField.returnKeyType = UIReturnKeyDone;
     self.emailField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     self.emailField.keyboardType = UIKeyboardTypeEmailAddress;
     self.emailField.returnKeyType = UIReturnKeyDone;
@@ -69,8 +75,6 @@ typedef enum : NSUInteger {
     self.firstNameField.tag = OVTextFieldFirstName;
     self.lastNameField.tag  = OVTextFieldLastName;
     self.emailField.tag     = OVTextFieldEmail;
-    
-    [self setArraysOfCourses];
 
 }
 
@@ -80,14 +84,10 @@ typedef enum : NSUInteger {
     [self setArraysOfCourses];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Actions
 
 - (BOOL)checkSelfTextFieldsIfCorrect {
+    // Animating fields with red color if incorrect
     
     BOOL ifCorrect = YES;
 
@@ -164,7 +164,7 @@ typedef enum : NSUInteger {
 
 #pragma mark - Private Methods
 
-- (UITextField *)createAndSetTextFieldFromRect:(CGRect)rect text:(NSString *)text AndIfIsEmail:(BOOL)isEmail {
+- (UITextField *)createAndSetTextFieldFromRect:(CGRect)rect text:(NSString *)text ifIsEmail:(BOOL)isEmail {
     
     UITextField *textField = [[UITextField alloc] initWithFrame:rect];
     
@@ -196,7 +196,6 @@ typedef enum : NSUInteger {
 - (UITextField *)createAndSetTextField {
     
     UITextField *textField = [[UITextField alloc] init];
-    
     textField.delegate = self;
     textField.autocorrectionType = UITextAutocorrectionTypeNo;
     textField.borderStyle = UITextBorderStyleRoundedRect;
@@ -215,7 +214,6 @@ typedef enum : NSUInteger {
 - (UILabel *)createAndSetLabelFromRect:(CGRect)rect andText:(NSString *)text {
     
     UILabel *label = [[UILabel alloc] initWithFrame:rect];
-    
     label.textAlignment = NSTextAlignmentRight;
     label.textColor = [UIColor grayColor];
     label.text = text;
@@ -230,12 +228,10 @@ typedef enum : NSUInteger {
     
     self.teachingCourses = [[self.user.teachingCourses allObjects] sortedArrayUsingDescriptors:@[name]];
     self.learningCourses = [[self.user.learningCourses allObjects] sortedArrayUsingDescriptors:@[name]];
-    
-    NSLog(@"\n__________________________\nteachingCourses\n\n%@\n\n\n\n\n______________________________\nlearningCourses\n\n%@", self.teachingCourses, self.learningCourses);
 }
 
-- (BOOL)validateEmail:(NSString *)string
-{
+- (BOOL)validateEmail:(NSString *)string {
+    
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     
@@ -244,41 +240,44 @@ typedef enum : NSUInteger {
 
 - (void)animateAlertWithTextField:(UITextField *)textField {
     
-    [UITextField animateWithDuration:0.5f
-                               delay:0.0f
-                             options:0
-                          animations:^{
-                              textField.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.4];
-                          }
-                          completion:^(BOOL finished) {
-                              if (finished) {
-                                  [UITextField animateWithDuration:0.5f
-                                                             delay:0.0f
-                                                           options:0
-                                                        animations:^{
-                                                            textField.backgroundColor = [UIColor whiteColor];
-                                                        }
-                                                        completion:nil];
-                                  
-                              }
-                          }];
+    [UITextField
+     animateWithDuration:0.5f
+                   delay:0.0f
+                 options:0
+              animations:^{
+                  textField.backgroundColor =
+                  [[UIColor redColor] colorWithAlphaComponent:0.4];
+              }
+              completion:^(BOOL finished) {
+                  if (finished) {
+                      [UITextField
+                       animateWithDuration:0.5f
+                                     delay:0.0f
+                                   options:0
+                                animations:^{
+                                    textField.backgroundColor = [UIColor whiteColor];
+                                }
+                                completion:nil];
+                      
+              }
+    }];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    if (section == 0) {
-        return @"Student Info";
+    if (section == OVSectionNumberStudentInfo) {
+        return sectionNameStudentInfo;
         
-    } else if (section == 1 && [self.teachingCourses count] > 0) {
-        return @"Teaching Courses";
+    } else if (section == OVSectionNumberTeachingCourses && [self.teachingCourses count] > 0) {
+        return sectionNameTeachingCourses;
         
     } else if ([self.learningCourses count] > 0) {
-        return @"Learning Courses";
+        return sectionNameLearningCourses;
     }
     
-    return @"Oops";
+    return @"";
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -287,7 +286,6 @@ typedef enum : NSUInteger {
     
     if ([self.teachingCourses count] > 0) {
         count++;
-        
     }
     
     if ([self.learningCourses count] > 0) {
@@ -300,10 +298,10 @@ typedef enum : NSUInteger {
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    if (section == 0) {
+    if (section == OVSectionNumberStudentInfo) {
         return 3;
 
-    } else if (section == 1 && [self.teachingCourses count] > 0) {
+    } else if (section == OVSectionNumberTeachingCourses && [self.teachingCourses count] > 0) {
         return [self.teachingCourses count];
         
     } else if ([self.learningCourses count] > 0) {
@@ -322,7 +320,7 @@ typedef enum : NSUInteger {
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
 
-        if (indexPath.section == 0) {
+        if (indexPath.section == OVSectionNumberStudentInfo) {
             
             CGRect labelRect = CGRectMake(0, 8, CGRectGetWidth(self.view.bounds) / 4 - 10, 30);
             CGRect textFieldRect = CGRectMake(CGRectGetWidth(self.view.bounds) / 4 + 10, 8, CGRectGetWidth(self.view.bounds) - CGRectGetWidth(labelRect) * 1.5f, 30);
@@ -363,7 +361,7 @@ typedef enum : NSUInteger {
             
             OVCourse *course = nil;
             
-            if (indexPath.section == 1) {
+            if (indexPath.section == OVSectionNumberTeachingCourses) {
                 
                 if ([self.teachingCourses count] > 0) {
                     course = [self.teachingCourses objectAtIndex:indexPath.row];
@@ -372,7 +370,7 @@ typedef enum : NSUInteger {
                     course = [self.learningCourses objectAtIndex:indexPath.row];
                 }
                 
-            } else if (indexPath.section == 2) {
+            } else if (indexPath.section == OVSectionNumberLearningCourses) {
                 
                 course = [self.learningCourses objectAtIndex:indexPath.row];
             }

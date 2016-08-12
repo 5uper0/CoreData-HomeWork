@@ -108,9 +108,6 @@
         [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     });
     
-    
-
-
 }
 
 - (void)dealloc {
@@ -164,8 +161,6 @@
             [deselectedStudents addObject:[filteredStudents firstObject]];
         }
     }
-    
-    NSLog(@"------- SELECTED #%ld MARKED OBJECTS", [deselectedStudents count]);
     
     [[OVDataManager sharedManager] changeCourse:self.course
                                   byAddingUsers:selectedStudents];
@@ -241,7 +236,6 @@
     [fetchRequest setEntity:description];
     
     NSSortDescriptor *firstNameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:YES];
-    
     NSSortDescriptor *lastNameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"lastName" ascending:YES];
     
     [fetchRequest setSortDescriptors:@[firstNameDescriptor, lastNameDescriptor]];

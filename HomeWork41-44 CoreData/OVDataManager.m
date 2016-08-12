@@ -101,8 +101,6 @@ typedef enum : NSUInteger {
     
     [course addStudents:[NSSet setWithArray:students]];
     
-    NSLog(@"SET#%ld AFTER ADDING #%ld ALL STUDENTS = #%ld", count, [students count], [[course.students allObjects] count]);
-    
     [self saveContext];
 }
 
@@ -112,8 +110,6 @@ typedef enum : NSUInteger {
     NSInteger count = [course.students count];
 
     [course removeStudents:[NSSet setWithArray:students]];
-    
-    NSLog(@"SET#%ld AFTER DELETING #%ld ALL STUDENTS = #%ld", count, [students count], [[course.students allObjects] count]);
     
     [self saveContext];
 }
@@ -539,11 +535,7 @@ typedef enum : NSUInteger {
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
-        
-        NSLog(@"CONTEXT SAVED");
-
     }
-    
 }
 
 @end

@@ -173,7 +173,9 @@ typedef enum : NSUInteger {
         UIButton *deleteButton = (UIButton *)sender;
         [deleteButton setTitle:@"Delete From Course" forState:UIControlStateNormal];
         [deleteButton setBackgroundColor:[[UIColor redColor] colorWithAlphaComponent:0.5f]];
-        [deleteButton addTarget:self action:@selector(actionDeleteStudents:) forControlEvents:UIControlEventTouchUpInside];
+        [deleteButton addTarget:self
+                         action:@selector(actionDeleteStudents:)
+               forControlEvents:UIControlEventTouchUpInside];
         
     }
 }
@@ -187,7 +189,9 @@ typedef enum : NSUInteger {
         UIButton *currentButton = (UIButton *)sender;
         [currentButton setBackgroundColor:[[UIColor lightGrayColor] colorWithAlphaComponent:0.5f]];
         [currentButton setTitle:@"Save Marked" forState:UIControlStateNormal];
-        [currentButton addTarget:self action:@selector(actionSaveChanges:) forControlEvents:UIControlEventTouchUpInside];
+        [currentButton addTarget:self
+                          action:@selector(actionSaveChanges:)
+                forControlEvents:UIControlEventTouchUpInside];
 
     }
 }
@@ -196,12 +200,14 @@ typedef enum : NSUInteger {
 
 - (void)setArrayOfStudents {
     
-    NSSortDescriptor *firstName = [[NSSortDescriptor alloc] initWithKey:@"firstName" ascending:YES];
-    NSSortDescriptor *lastName = [[NSSortDescriptor alloc] initWithKey:@"lastName" ascending:YES];
+    NSSortDescriptor *firstName = [[NSSortDescriptor alloc] initWithKey:@"firstName"
+                                                              ascending:YES];
+    NSSortDescriptor *lastName = [[NSSortDescriptor alloc] initWithKey:@"lastName"
+                                                             ascending:YES];
     
-    self.allStudents = [[self.course.students allObjects] sortedArrayUsingDescriptors:@[firstName, lastName]];
+    self.allStudents =
+    [[self.course.students allObjects] sortedArrayUsingDescriptors:@[firstName, lastName]];
         
-    NSLog(@"self.allStudents = allStudents");
 }
 
 - (UITextField *)createAndSetTextFieldFromRect:(CGRect)rect andText:(NSString *)text {
@@ -438,26 +444,15 @@ typedef enum : NSUInteger {
     OVUser *user = [self.allStudents objectAtIndex:indexPath.row - 1];
     NSMutableArray *tempArray = [NSMutableArray arrayWithArray:self.allStudents];
     
-    NSLog(@"[tempArray count] = %ld", [tempArray count]);
-    
     [tempArray removeObject:user];
 
     self.allStudents = [NSArray arrayWithArray:tempArray];
-
-    NSLog(@"[self.allStudents count] = %ld", [self.allStudents count]);
     
     [self.course removeStudents:self.course.students];
     [self.course addStudents:[NSSet setWithArray:self.allStudents]];
     
     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
 }
-
-/*
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    
-    return CGFLOAT_MIN;
-}*/
-
 
 #pragma mark - UITableViewDelegate
 
