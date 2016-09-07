@@ -97,8 +97,6 @@ typedef enum : NSUInteger {
 - (void)changeCourse:(OVCourse *)course
        byAddingUsers:(NSArray *)students {
     
-    NSInteger count = [course.students count];
-    
     [course addStudents:[NSSet setWithArray:students]];
     
     [self saveContext];
@@ -107,8 +105,6 @@ typedef enum : NSUInteger {
 - (void)changeCourse:(OVCourse *)course
      byRemovingUsers:(NSArray *)students {
     
-    NSInteger count = [course.students count];
-
     [course removeStudents:[NSSet setWithArray:students]];
     
     [self saveContext];

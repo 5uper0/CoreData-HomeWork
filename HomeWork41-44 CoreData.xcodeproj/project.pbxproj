@@ -32,6 +32,7 @@
 		AC6773311D34EDED00E63DF2 /* OVUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AC67732D1D34EDED00E63DF2 /* OVUser.m */; };
 		AC95920D1D37ABCC00E3A97F /* museum_32px.png in Resources */ = {isa = PBXBuildFile; fileRef = AC95920C1D37ABCC00E3A97F /* museum_32px.png */; };
 		AC95920F1D37ABFD00E3A97F /* to_do_100px.png in Resources */ = {isa = PBXBuildFile; fileRef = AC95920E1D37ABFD00E3A97F /* to_do_100px.png */; };
+		ACA14CA41D80815E0000C3F9 /* CoreData-Test.gif in Resources */ = {isa = PBXBuildFile; fileRef = ACA14CA31D80815E0000C3F9 /* CoreData-Test.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		AC67732D1D34EDED00E63DF2 /* OVUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVUser.m; sourceTree = "<group>"; };
 		AC95920C1D37ABCC00E3A97F /* museum_32px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = museum_32px.png; sourceTree = "<group>"; };
 		AC95920E1D37ABFD00E3A97F /* to_do_100px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = to_do_100px.png; sourceTree = "<group>"; };
+		ACA14CA31D80815E0000C3F9 /* CoreData-Test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "CoreData-Test.gif"; path = "Screenshots/CoreData-Test.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		AC18C7711D2D09A000FDC32B = {
 			isa = PBXGroup;
 			children = (
+				ACA14CA21D80812B0000C3F9 /* Screenshots */,
 				AC18C77C1D2D09A000FDC32B /* HomeWork41-44 CoreData */,
 				AC18C7991D2D09A100FDC32B /* HomeWork41-44 CoreDataTests */,
 				AC18C7A41D2D09A100FDC32B /* HomeWork41-44 CoreDataUITests */,
@@ -150,8 +153,6 @@
 				AC61EADC1D366AAC00DDE915 /* ViewControllers */,
 				AC61EADD1D366AC800DDE915 /* CoreData */,
 				AC67731D1D343BCB00E63DF2 /* images */,
-				AC18C7831D2D09A000FDC32B /* ViewController.h */,
-				AC18C7841D2D09A100FDC32B /* ViewController.m */,
 				AC18C78C1D2D09A100FDC32B /* Assets.xcassets */,
 				AC18C78E1D2D09A100FDC32B /* LaunchScreen.storyboard */,
 				AC18C7911D2D09A100FDC32B /* Info.plist */,
@@ -208,10 +209,20 @@
 		AC61EADC1D366AAC00DDE915 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AC18C7BA1D2D0C8700FDC32B /* OVCoreDataTableViewController.h */,
+				AC18C7BB1D2D0C8700FDC32B /* OVCoreDataTableViewController.m */,
+				AC18C7C31D2D174E00FDC32B /* OVUsersTableViewController.h */,
+				AC18C7C41D2D174E00FDC32B /* OVUsersTableViewController.m */,
 				AC18C8151D2D4B9200FDC32B /* OVUserEditingViewController.h */,
 				AC18C8161D2D4B9200FDC32B /* OVUserEditingViewController.m */,
+				AC18C81E1D2F912E00FDC32B /* OVCoursesViewController.h */,
+				AC18C81F1D2F912E00FDC32B /* OVCoursesViewController.m */,
 				AC67731A1D304C5D00E63DF2 /* OVCoursesEditingTableViewController.h */,
 				AC67731B1D304C5D00E63DF2 /* OVCoursesEditingTableViewController.m */,
+				AC61EADE1D379D9F00DDE915 /* OVTeachersViewController.h */,
+				AC61EADF1D379D9F00DDE915 /* OVTeachersViewController.m */,
+				AC18C7831D2D09A000FDC32B /* ViewController.h */,
+				AC18C7841D2D09A100FDC32B /* ViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -221,14 +232,6 @@
 			children = (
 				AC18C7BD1D2D0DC600FDC32B /* OVDataManager.h */,
 				AC18C7BE1D2D0DC600FDC32B /* OVDataManager.m */,
-				AC18C7BA1D2D0C8700FDC32B /* OVCoreDataTableViewController.h */,
-				AC18C7BB1D2D0C8700FDC32B /* OVCoreDataTableViewController.m */,
-				AC18C7C31D2D174E00FDC32B /* OVUsersTableViewController.h */,
-				AC18C7C41D2D174E00FDC32B /* OVUsersTableViewController.m */,
-				AC18C81E1D2F912E00FDC32B /* OVCoursesViewController.h */,
-				AC18C81F1D2F912E00FDC32B /* OVCoursesViewController.m */,
-				AC61EADE1D379D9F00DDE915 /* OVTeachersViewController.h */,
-				AC61EADF1D379D9F00DDE915 /* OVTeachersViewController.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -243,6 +246,14 @@
 				AC95920E1D37ABFD00E3A97F /* to_do_100px.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		ACA14CA21D80812B0000C3F9 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				ACA14CA31D80815E0000C3F9 /* CoreData-Test.gif */,
+			);
+			name = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +364,7 @@
 			files = (
 				AC6773231D343EF100E63DF2 /* gender_neutral_user_32px.png in Resources */,
 				AC95920F1D37ABFD00E3A97F /* to_do_100px.png in Resources */,
+				ACA14CA41D80815E0000C3F9 /* CoreData-Test.gif in Resources */,
 				AC18C7901D2D09A100FDC32B /* LaunchScreen.storyboard in Resources */,
 				AC18C78D1D2D09A100FDC32B /* Assets.xcassets in Resources */,
 				AC6773251D343EFF00E63DF2 /* library_32px.png in Resources */,
